@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap");
+
+:root {
+  --font: "Comfortaa", cursive;
+  --cor-principal: #a27b5c;
+  --bg-color: #2c3639;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--cor-principal);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+  font-family: var(--font);
+}
+
+h1 {
+  font-size: 5em;
+}
+h3 {
+  margin: 20px 0;
+  font-size: 3em;
+}
+.mensagem {
+  font-size: 1.7em;
+}
+.box {
+  padding: 10px;
+  margin: 15px 0;
+  font-size: 3em;
+  border: 4px inset #dcd7c9;
+  display: inline-block;
+}
+.btn-jogar {
+  margin-top: 20px;
+  padding: 12px 15px;
+  border: none;
+  background-color: var(--cor-principal);
+  border-radius: 8px;
+  font-size: 1.3em;
+  font-family: var(--font);
+  cursor: pointer;
+  transition: 0.2s;
+}
+.btn-jogar:hover {
+  transform: scale(1.1);
+  background-color: #795131;
+}
