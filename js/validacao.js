@@ -2,15 +2,21 @@ function verificaChute(chute) {
   const numero = +chute
 
   if (chuteInvalido(numero)) {
-    elementoChute.innerHTML += `<div>Valor inválido!</div>`
-    return
+    if (chute === "game over") {
+      document.body.innerHTML = `
+      <h1>O jogo acabou.</h1>
+      <button id="jogar-novamente" class="btn-jogar">Jogar Novamente!</button>
+      `
+    } else {
+      elementoChute.innerHTML += `<div>Valor inválido!</div>`
+      return
+    }
   }
 
   if (numeroMaiorOuMenor(numero)) {
     elementoChute.innerHTML += `<div>Valor inválido! O numero precisa estar entre: ${menorValor} e ${maiorValor}!</div>`
     return
   }
-
   if (numero === numeroSecreto) {
     document.body.innerHTML = `
     <h1>Parabéns! Você acertou!</h1>
